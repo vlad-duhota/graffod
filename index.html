@@ -1,182 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graffood</title>
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- main page styles -->
     <link rel="stylesheet" href="css/style.css">
-   <!-- Add the slick-theme.css if you want default styling -->
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<!-- Add the slick-theme.css if you want default styling -->
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <!-- slick main -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- slick theme -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- favicon -->
     <link rel="shortcut icon" href="img/favicon.png">
+    <!-- animate css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
-<body>
-   <div class="wrapper">
+
+<body class="page">
+    <!-- cursor -->
+    <div id="cursor"></div>
+    <!-- cursor -->
+    <div class="wrapper">
+        <!-- page header -->
         <header class="header">
-           <div class="container">
-               <span></span>
-                   <a href="index.html" class="logo">
-                       <img src="img/logo.png" alt="">
-                   </a>
-                   <input type="checkbox" id="menu-toggle">
-                   <label for="menu-toggle" class="menu-btn">
-                       <span></span>
-                   </label>
-               <div class="site-nav">
+            <!-- header container -->
+            <div class="container">
+                <!-- helping element -->
+                <div></div>
+                <!-- logo -->
+                <a href="index.html" class="logo">
+                    <img src="img/logo.png" alt="">
+                </a>
+                 <!-- menu button -->
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-btn">
+                    <span></span>
+                </label>
+                <!-- navigation -->
+                <div class="site-nav">
+                    <!-- small menu -->
                     <nav class="menu-small">
                         <a class="menu-link main-link" href="index.html">Главная</a>
-                    <ul class="menu-list">
-                        <li class="menu-item">
-                            <a href="#" class="menu-link">Статьи</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="menu-link">Новости</a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="menu-link">Контакти</a>
-                        </li>
-                    </nav>
-                        <nav class="menu-main">
-                            <ul class="menu-list">
-                                <li class="menu-item">
-                                    <a href="#" class="menu-link">Компания</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="#">Отзывы</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="#" class="menu-link">Кейтеринг</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="#">Фуршет</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Кофе-брейк</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Банкет</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Гриль-меню</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Суши меню</a>
-                                        </li> 
-                                        <li>
-                                            <a href="#">Коктейль</a>
-                                        </li>
-
-                                    </ul>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="#" class="menu-link">Услуги</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="#">Оформление</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Место Проведение</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Литвиновка</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Доставка обедов</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="#" class="menu-link">Аренда</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="#">Аренда Оборудования</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Аренда Текстиля</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Аренда Мебели</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="#" class="menu-link">Галерея</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="#">Кейтеринг</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Литвиновка</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">Статьи</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">Новости</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="contacts.html" class="menu-link">Контакти</a>
+                            </li>
                         </nav>
-               </div>
-           </div>
+
+                        <!-- big menu -->
+                    <nav class="menu-main">
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <a class="menu-link">Компания</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">Отзывы</a>
+                                    </li>
+                                    <p class="close">+</p>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">Кейтеринг</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="buffet.html">Фуршет</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Кофе-брейк</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Банкет</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Гриль-меню</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Суши меню</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Коктейль</a>
+                                    </li>
+                                    <p class="close">+</p>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">Услуги</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">Оформление</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Место Проведение</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Доставка обедов</a>
+                                    </li>
+                                    <p class="close">+</p>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">Аренда</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">Аренда Оборудования</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Аренда Текстиля</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Аренда Мебели</a>
+                                    </li>
+                                    <p class="close">+</p>
+                                </ul>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-link">Галерея</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#">Кейтеринг</a>
+                                    </li>
+                                    <p class="close">+</p>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </header>
+
+        <!-- main -->
         <main class="main">
-            <section class="first-section">
+            <!-- first section -->
+            <section class="intro">
                 <div class="container">
+                    <!-- text -->
                     <div class="text-block">
-                        <h1>Компания ГраФФуд
-                            <br>
-                            <span>Организация и проведение банкета, фуршета, свадьбы. Качество и профессионализм.</span>
-                        </h1>
-                        <p class="main-text">Праздники любят все, особенно  интересные, необычные, красочные, красивые – такие, которые надолго остаются в памяти участников и гостей праздника. Если Вы не представляете, как провести Ваш праздник, обратитесь в нашу кейтеринговую компанию. Компания «ГраФФуд».</p>
-                        <a href="#">Услуги	&rarr;</a>
+                        <h1>Компания ГраФФуд</h1>
+                        <p class="main-text">Праздники любят все, особенно интересные, необычные, красочные, красивые –
+                            такие, которые надолго остаются в памяти участников и гостей праздника. Если Вы не
+                            представляете, как провести Ваш праздник, обратитесь в нашу кейтеринговую компанию. Компания
+                            «ГраФФуд».</p>
+                        <a href="#holiday">Заказать</a>
                     </div>
+                    <!-- img -->
                     <div class="img-block">
+                        <div class="img-block_content">
                             <img src="img/first_dish.jpg" alt="">
                             <div class="double-img">
                                 <img src="img/dish_2.jpg" alt="">
                                 <img src="img/dish_3.jpg" alt="">
+                            </div>
+                        </div>
+                        <!-- mobile slider -->
+                        <div class="mobile-slider">
+                            <img src="img/first_dish.jpg" alt="">
+                            <img src="img/dish_2.jpg" alt="">
+                            <img src="img/dish_3.jpg" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="first-section__footer">
-                    <a href="#" class="scroll-down">
-                        <img src="img/scroll-down.svg" alt="">
-                    </a>
-                    <ul class="socials">
-                        <li class="socials__item">
-                            <a href="#" class="socials__item__link">
-                                <img src="img/Facebook.svg" alt="">
-                            </a>
+                    <!-- socials phone and scroll-down btns -->
+                    <div class="intro__footer">
+                        <a href="#advantages" class="scroll-down">
+                            <img src="img/scroll-down.svg" alt="">
+                        </a>
+                        <ul class="socials">
+                            <li class="socials__item">
+                                <a href="#" class="socials__item__link">
+                                    <img src="img/Facebook.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="#" class="socials__item__link">
+                                    <img src="img/Instagram.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="https://t.me/vlad_duhota_2009" class="socials__item__link">
+                                    <img src="img/Telegram.svg" alt="">
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="#" class="socials__item__link">
+                                    <img src="img/Google.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="contacts.html" class="phone-link">
+                            <img src="img/phone.svg" alt="">
+                        </a>
+                    </div>
+            </section>
+            <!-- advantages section -->
+            <section id="advantages" class="advantages">
+                <div class="container">
+                    <!-- title -->
+                    <h2 class="section-title wow animate__animated animate__fadeInDown">Почему мы?</h2>
+                    <!-- advantages list -->
+                    <ul class="advantages__list">
+                        <!-- advantages list item -->
+                        <li class="advantages__list__item wow animate__animated animate__fadeInLeft">
+                            <div class="advantages__list__item__img-wrap">
+                                <img src="img/advantages_1.svg" alt="">
+                            </div>
+                            <h3 class="advantages__list__item__title">Вкусная и красивая еда</h3>
                         </li>
-                        <li class="socials__item">
-                            <a href="#" class="socials__item__link">
-                                <img src="img/Instagram.svg" alt="">
-                            </a>
+                        <!-- advantages list item -->
+                        <li class="advantages__list__item wow animate__animated animate__fadeInLeft" data-wow-delay="300ms">
+                            <div class="advantages__list__item__img-wrap">
+                                <img src="img/advantages_1.svg" alt="">
+                            </div>
+                            <h3 class="advantages__list__item__title">Умение слышать пожелание заказчика</h3>
                         </li>
-                        <li class="socials__item">
-                            <a href="#" class="socials__item__link">
-                                <img src="img/Telegram.svg" alt="">
-                            </a>
+                        <!-- advantages list item -->
+                        <li class="advantages__list__item wow animate__animated animate__fadeInLeft" data-wow-delay="600ms">
+                            <div class="advantages__list__item__img-wrap">
+                                <img src="img/advantages_3.svg" alt="">
+                            </div>
+                            <h3 class="advantages__list__item__title">Оперативность обработки запросов</h3>
                         </li>
-                        <li class="socials__item">
-                            <a href="#" class="socials__item__link">
-                                <img src="img/Google.svg" alt="">
-                            </a>
+                        <!-- advantages list item -->
+                        <li class="advantages__list__item wow animate__animated animate__fadeInLeft">
+                            <div class="advantages__list__item__img-wrap">
+                                <img src="img/advantages_4.svg" alt="">
+                            </div>
+                            <h3 class="advantages__list__item__title">Европейский менеджмент и инновационный подход</h3>
+                        </li>
+                        <!-- advantages list item -->
+                        <li class="advantages__list__item wow animate__animated animate__fadeInLeft" data-wow-delay="300ms">
+                            <div class="advantages__list__item__img-wrap">
+                                <img src="img/advantages_5.svg" alt="">
+                            </div>
+                            <h3 class="advantages__list__item__title">Большой опыт в коммуникациях с площадками</h3>
+                        </li>
+                        <!-- advantages list item -->
+                        <li class="advantages__list__item wow animate__animated animate__fadeInLeft" data-wow-delay="600ms">
+                            <div class="advantages__list__item__img-wrap">
+                                <img src="img/advantages_6.svg" alt="">
+                            </div>
+                            <h3 class="advantages__list__item__title">Множество профессиональных наград</h3>
                         </li>
                     </ul>
-                    <a href="#" class="phone-link">
-                        <img src="img/phone.svg" alt="">
-                    </a>
+                </div>
+            </section>
+            <section class="holiday" id="holiday">
+                <div class="container">
+                    <h2 class="section-title">Организация Праздника</h2>
+                    <ul class="holiday__list">
+                        <li class="holiday__list__items">
+                            <img src="img/holiday-img.jpg" alt="">
+                            <div class="text-content">
+                                <p class="decs">выставки, презентации</p>
+                                <a class="pop-up-open-btn">Заказать</a>
+                            </div>
+                        </li>
+                        <li class="holiday__list__items">
+                            <img src="img/holiday-img.jpg" alt="">
+                            <div class="text-content">
+                                <p class="decs">семинары</p>
+                                <a class="pop-up-open-btn">Заказать</a>
+                            </div>
+                        </li>
+                        <li class="holiday__list__items">
+                            <img src="img/holiday-img.jpg" alt="">
+                            <div class="text-content">
+                                <p class="decs"> корпоративные праздники, вечеринки</p>
+                                <a class="pop-up-open-btn">Заказать</a>
+                            </div>
+                        </li>
+                        <li class="holiday__list__items">
+                            <img src="img/holiday-img.jpg" alt="">
+                            <div class="text-content">
+                                <p class="decs">свадьбы, юбилеи, дни рождения</p>
+                                <a class="pop-up-open-btn">Заказать</a>
+                            </div>
+                        </li>
+
+                    </ul>
                 </div>
             </section>
         </main>
+        <div class="branding">
+            <div class="branding-text">
+              <p class="hide">
+                <span class="brand-text">Кейтеринг Graffod</span>
+              </p>
+              <p class="hide">
+                <span class="brand-text">Организация и проведение банкета, фуршета, свадьбы.</span>
+              </p>
+            </div>
+          </div>
+          <div class="slider"></div>
         <footer class="footer"></footer>
-   </div>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- pop-up 1 -->
+        <div class="pop-up">
+            <div class="content">
+                <a href="contacts.html" class="pop-up__contact-link">Контакти
+                    <svg width="18" height="45" viewBox="0 0 18 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 45L17.6603 30H0.339746L9 45ZM7.5 0L7.5 31.5H10.5L10.5 0L7.5 0Z" fill="black" />
+                    </svg>
+                </a>
+                <a href="#" class="pop-up-close-btn">+</a>
+                <p>Или напишите нам</p>
+                <a href="#" class="pop-up2-open-btn">Написать</a>
+            </div>
+        </div>
+           <!-- pop-up 2 -->
+        <div class="pop-up2">
+            <form action="#" method="post">
+                <div>
+                    <h3>Написать нам</h3>
+                    <a class="pop-up2-close-btn">+</a>
+                </div>
+                <input type="text" name="" id="" placeholder="Ваше имя:">
+                <input type="tel" name="" id="" placeholder="Ваш е-mail:">
+                <input type="email" name="" id="" placeholder="Ваш телефон:">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Ваше сообщение:"></textarea>
+                <input type="submit" value="Отправить">
+            </form>
+        </div>
+    </div>
+    <!-- scripts -->
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- slick slider -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- gsap animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <!-- main custom script -->
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="wow.min.js"></script>
+    <!-- mobile slider inline script -->
     <script type="text/javascript">
+        $('.mobile-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 4000,
+            fade: true,
+            speed: 1000
+        });
+           // wow scroll animate plugin initialize
+        new WOW().init();
     </script>
+
 </body>
+
 </html>

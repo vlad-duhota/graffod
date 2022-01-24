@@ -1,0 +1,299 @@
+$main: #671e17;
+
+.header{
+    position: absolute;
+    z-index: 30;
+    width: 100%;
+    top: 0;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &.blured{
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 6, 0.6);
+        backdrop-filter: blur(10px);
+    }
+}
+
+.menu-small{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 65px 35px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @media (max-width:578px) {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-list{
+        display: flex;
+        position: relative;
+        right: -100%;
+        transition: right .5s;
+        @media (max-width:578px) {
+            margin-top: 20px;
+        }
+    }
+    .menu-link{
+        color:#fff;
+    }
+
+    .main-link{
+        position: relative;
+        left: -300%;
+        transition-delay: .2s;
+        transition: left .4s, color .3s;
+    }
+
+    .menu-item{
+        margin-left: 22px;
+        &:first-child{
+            margin-left: 0;
+        }
+    }
+
+    a{
+        transition: color .3s;
+        &:hover{
+            color: $main;
+        }
+    }
+
+}
+    .menu-link{
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+.menu-main{
+    margin-top: 70px;
+    padding: 0 65px;
+    position: relative;
+    @media (max-width:1024px) {
+        margin-top: 0;
+    }
+    .menu-list{
+        display: flex;
+        justify-content: space-between;
+        .menu-item{
+            position: relative;
+            top: -60vh;
+            transition: .4s;
+            @media (max-width:1024px) {
+                width: 33.33%;
+                text-align: center;
+                margin-top: 40px;
+            }
+            @media (max-width:768px) {
+                width: 100%;
+                text-align: left;
+                margin-top: 8vh;
+                position: static;
+            }
+            @media (max-width:768px) {
+               text-align: center;
+            }
+        }
+        @media (max-width:1024px) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        @media (max-width:768px) {
+           flex-direction: column;
+        }
+        .menu-link{
+            color:$main;
+            margin-bottom: 30px;
+            @media (max-width:768px) {
+                font-size: 30px;
+            }
+        }
+    }
+
+ 
+
+    .sub-menu{
+        font-size: 20px;
+        a{
+            display: inline-block;
+            color:#fff;
+            margin-top: 20px;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 2px;
+                background: #fff;
+                top: 110%;
+                transform-origin: center;
+                transform: scaleX(0);
+                transition: transform .3s;
+            }
+            &:hover::after{
+                transform: scaleX(1);
+            }
+        }
+        .close{
+            display: none;
+        }
+        @media (max-width:768px) {
+            position: absolute;
+            z-index: 34;
+            min-height: 50vh;
+            width: 100%;
+            left: -150%;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 40px;
+            background: #fff;
+            border-radius: 25px;
+            transition: left .4s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            a{
+                color: #000;
+                font-size: 30px;
+            }
+            &.open{
+              left: 0;
+            }
+            .close{
+                display: block;
+                position: absolute;
+                transform: rotate(45deg);
+                top: 20px;
+                right: 30px;
+                color: #909ca7;
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+.site-nav{
+    padding-top: 100px;
+    padding-bottom: 65px;
+    position: absolute;
+    background: #da5044;
+    width: 100%;
+    height: 100vh;
+    top: -100vh;
+    left: 0;
+    transition: top .3s;
+    &::after{
+        content: 'Ми сделаем ваш праздник незабиваемим!';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        width: 50%;
+        font-size: 40px;
+        padding: 40px;
+        color: $main;
+        background: #fff;
+        transition: width .6s;
+        transition-delay: .5s;
+        @media (max-width:1024px) {
+            display: none;
+        }
+    }
+}
+
+// menu-btn
+#menu-toggle{
+    display: none;
+    width: 41px;
+    height: 20px;
+}
+.menu-btn{
+    width: 41px;
+    height: 24px;
+    text-align: right;
+    z-index: 31;
+    span{
+        position: relative;
+        display: inline-block;
+        width: 23px;
+        height: 2px;
+        background: #fff;
+        transition: .3s;
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 41px;
+            height: 2px;
+            right: 0;
+            top: -10px;
+            background: #fff;
+            transition: .3s;
+        }
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 31px;
+            height: 2px;
+            top: 10px;
+            right: 0;
+            background: #fff;
+            transition: .3s;
+        }
+    }
+    &.invert{
+        span{
+            background: #000;
+            &::before,
+            &::after{
+                background: #000; 
+            }
+        }
+    }
+}
+
+#menu-toggle:checked ~ .site-nav{
+    top: 0;
+    .menu-item{
+        top: 0;
+    }
+
+    .menu-small{
+        .menu-list{
+            right: 0;
+        }
+        .main-link{
+            left: 0;
+        }
+    }
+    &::after{
+        width: 100%;
+    }
+}
+
+
+#menu-toggle:checked + .menu-btn{
+    span{
+        width: 41px;
+        transform: rotate(45deg);
+        &::after{
+            top: 0;
+            width: 41px;
+            transform: rotate(90deg);
+        }
+        &::before{
+            top: 0;
+        }
+    }
+}
+
+
+// scrollbar
+// ::-webkit-scrollbar{
+//     display: none;
+// }
