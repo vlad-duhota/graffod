@@ -1,0 +1,35 @@
+@import 'global';
+@import 'header';
+// global
+
+.reviews{
+    padding-top: 100px;
+    text-align: center;
+    &__list{
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+        @media (max-width:768px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__item{
+            width: 33%;
+            padding: 40px;
+            a{
+                display: block;
+                width: 100%;
+            }
+            img{
+                display: block;
+                width: 100%;
+            }
+            @media (max-width:768px) {
+                width: 50%;
+            }
+            @media (max-width:578px) {
+                width: 100%;
+            }
+        }
+    }
+}

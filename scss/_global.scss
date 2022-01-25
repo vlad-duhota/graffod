@@ -37,7 +37,6 @@ a{
 }
 
 .page{
-    overflow: none;
     &.no-scroll{
         overflow: hidden;
     }
@@ -112,3 +111,13 @@ a{
     font-size: .5em;
   }
 
+
+//   selection
+::selection{
+    background: rgba($color: $main, $alpha: .5);
+    color: #fff;
+}
+// scrollbar
+::-webkit-scrollbar{
+    display: none;
+}

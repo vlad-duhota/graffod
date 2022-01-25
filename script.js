@@ -1,33 +1,6 @@
 // vars
 let  mouseX, mouseY, posX, posY
 
-
-        // pop-up1
-    $('.pop-up-open-btn, .pop-up-close-btn').click(function(){
-        $('.pop-up').toggleClass('open');
-        $('.pop-up2').removeClass('open');
-        $('.page').toggleClass('no-scroll');
-    });
-        // pop-up2
-    $('.pop-up2-open-btn, .pop-up2-close-btn').click(function(){
-        $('.pop-up2').toggleClass('open');
-        $('.pop-up').removeClass('open');
-        $('.page').toggleClass('no-scroll');
-    });
-
-    $('.pop-up-close-btn, .pop-up2-close-btn').click(function(){
-        $('.page').removeClass('no-scroll');
-    });
-        // header burger-menu spoilers
-    $('.menu-link').click(function(e){
-        $('.sub-menu').removeClass('open');
-        $(this).parent().find('.sub-menu').toggleClass('open');
-    });
-        // header burger-menu spoilers close
-    $('.close').click(function(e){
-        $('.sub-menu').removeClass('open');
-    });
-
     //corrected placeholders
     jQuery(document).ready(function ($) {
         $('input, textarea').focus(function(){
@@ -36,6 +9,31 @@ let  mouseX, mouseY, posX, posY
         });
         $('input, textarea').blur(function(){
             $(this).attr('placeholder',$(this).data('placeholder'));
+        });
+              // pop-up1
+        $('.pop-up-open-btn, .pop-up-close-btn').click(function(){
+            $('.pop-up').toggleClass('open');
+            $('.pop-up2').removeClass('open');
+            $('.page').toggleClass('no-scroll');
+        });
+            // pop-up2
+        $('.pop-up2-open-btn, .pop-up2-close-btn').click(function(){
+            $('.pop-up2').toggleClass('open');
+            $('.pop-up').removeClass('open');
+            $('.page').toggleClass('no-scroll');
+        });
+    
+        $('.pop-up-close-btn, .pop-up2-close-btn').click(function(){
+            $('.page').removeClass('no-scroll');
+        });
+            // header burger-menu spoilers
+        $('.menu-link').click(function(e){
+            $('.sub-menu').removeClass('open');
+            $(this).parent().find('.sub-menu').toggleClass('open');
+        });
+            // header burger-menu spoilers close
+        $('.close').click(function(e){
+            $('.sub-menu').removeClass('open');
         });
     });
 

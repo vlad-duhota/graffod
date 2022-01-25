@@ -2,7 +2,6 @@
 @import 'header';
 
 // var
-$bg: #222;
 
 section{
     transition: .5s background;
@@ -11,6 +10,18 @@ section{
 .intro{
     padding: 125px 0 50px;
     background: #fff;
+    .next{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        right: 30px;
+        background: #1e1e1e;
+        padding: 15px;
+        color: #fff;
+        img{
+            margin-left: 15px;
+        }
+    }
     &__block{
         display: flex;
         justify-content: space-between;
@@ -20,19 +31,31 @@ section{
         &.reverse{
             flex-direction: row-reverse;
             text-align: left;
-
+            @media (max-width:992px) {
+                flex-direction: column;
+            }
         }
         &__text-column{
             width: 50%;
+            @media (max-width:992px) {
+                width: 100%;
+            }
         }
         &__img-column{
             width: 40%;
             display: flex;
             justify-content: space-between;
+            margin-bottom: 30px;
             img{
                 width: 48%;
                 border-radius: 30px;
             }
+            @media (max-width:992px) {
+                width: 100%;
+            }
+        }
+        @media (max-width:992px) {
+            flex-direction: column;
         }
     }
     .intro__block.reverse .intro__block__img-column{
@@ -49,6 +72,9 @@ section{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width:992px) {
+            flex-direction: column;
+        }
     }
     &__text-column{
         width: 55%;
@@ -63,12 +89,20 @@ section{
                 border-radius: 25px;
                 color: #000;
                 position: relative;
+                &__text{
+                    width: 75%;
+                    text-align: left;
+                }
                 &.reverse{
                     flex-direction: row-reverse;
                     &::before{
                         left: 0;
                     }
+                    .format__text-column__list__item__text{
+                        text-align: right;
+                    }
                 }
+
                 &::before{
                     content: '';
                     position: absolute;
@@ -78,14 +112,22 @@ section{
                     top: 0;
                     right: 0;
                     background: $main;
+                    @media (max-width:475px) {
+                        width: 60px;
+                    }
                 }
                 .number{
                     position: relative;
                     z-index: 2;
                     color: #fff;
                     font-size: 24px;
+                    display: block;
                 }
+            
             }
+        }
+        @media (max-width:992px) {
+            width: 100%;
         }
     }
     &__img-column{
@@ -96,15 +138,25 @@ section{
             height: auto;
             border-radius: 30px;
         }
+        @media (max-width:992px) {
+            width: 70%;
+            margin: 30px auto 0;
+        }
     }
 }
 
 .section-title{
     font-size: 40px;
     margin-bottom: 25px;
+    @media (max-width:578px) {
+        text-align: center;
+    }
 }
 .subtitle{  
     font-size: 24px;
+    @media (max-width:578px) {
+        text-align: center;
+    }
 }
 
 .gallery{
@@ -115,11 +167,18 @@ section{
         &.slider-small{
             width: 50%;
             margin: 0 auto;
+            @media (max-width:992px) {
+                width: 70%;
+            }
         }
         &__content{
             opacity: .5;
             transform: scale(.7);
             transition: .5s;
+            @media (max-width:768px) {
+                opacity: 1;
+                transform: scale(1);
+            }
             img{
                 width: 100%;
                 border-radius: 25px;
@@ -139,7 +198,7 @@ section{
     height: 100vh;
     left: 0;
     top: 0;
-    background: #ffeeee;
+    background: #ddf1dd ;
     clip-path: circle(0px at center center);
 }
 

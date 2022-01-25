@@ -5,6 +5,14 @@ $main: #671e17;
     z-index: 30;
     width: 100%;
     top: 0;
+    .logo{
+        img{
+            @media (max-width:578px) {
+                width: 200px;
+                height: 75px;
+            }
+        }
+    }
     .container{
         display: flex;
         justify-content: space-between;
