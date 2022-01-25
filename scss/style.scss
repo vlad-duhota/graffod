@@ -121,6 +121,7 @@
         @media(max-width: 475px){
             width: 100%;
             margin-bottom: 40px;
+            padding-top: 100px;
         }
     }
     .img-block{
@@ -418,7 +419,7 @@
     z-index: 31;
     width: 100%;
     height: 100vh;
-    top: -100vh;
+    top: -150vh;
     left: 0;
     background: rgba($color: #000000, $alpha: 0.5);
     display: flex;
@@ -478,7 +479,7 @@
     z-index: 31;
     width: 100%;
     height: 100vh;
-    top: -100vh;
+    top: -150vh;
     left: 0;
     background: rgba($color: #000000, $alpha: 0.5);
     display: flex;
