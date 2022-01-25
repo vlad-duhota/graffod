@@ -121,7 +121,6 @@
         @media(max-width: 475px){
             width: 100%;
             margin-bottom: 40px;
-            padding-top: 100px;
         }
     }
     .img-block{
@@ -208,6 +207,9 @@
                 }
             }
         }
+    }
+    @media(max-width: 475px){
+        padding-top: 100px;
     }
 }
 

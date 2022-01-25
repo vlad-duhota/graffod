@@ -693,7 +693,6 @@ a {
   .intro .text-block {
     width: 100%;
     margin-bottom: 40px;
-    padding-top: 100px;
   }
 }
 
@@ -818,6 +817,12 @@ a {
   }
   .intro__footer .phone-link img {
     width: 100%;
+  }
+}
+
+@media (max-width: 475px) {
+  .intro {
+    padding-top: 100px;
   }
 }
 
