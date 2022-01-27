@@ -617,8 +617,8 @@ section {
   height: 100%;
   background: #fff;
   z-index: 3;
-  -webkit-clip-path: circle(800px at center center);
-          clip-path: circle(800px at center center);
+  -webkit-clip-path: circle(50vw at center center);
+          clip-path: circle(50vw at center center);
 }
 
 @media (max-width: 992px) {

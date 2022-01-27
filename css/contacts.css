@@ -546,7 +546,7 @@ a {
 
 .contacts {
   height: 100vh;
-  background: url(../img/contact-bg.png) center/cover no-repeat;
+  background: url(../img/contact-bg.jpg) center/cover no-repeat;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
