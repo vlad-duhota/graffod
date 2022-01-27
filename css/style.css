@@ -637,6 +637,12 @@ a {
   font-weight: 700;
 }
 
+@media (max-width: 425px) {
+  .intro .text-block h1 {
+    font-size: 32px;
+  }
+}
+
 .intro .text-block p {
   margin-top: 25px;
   margin-bottom: 35px;
@@ -703,6 +709,12 @@ a {
 @media (max-width: 768px) {
   .intro .img-block {
     width: 70%;
+  }
+}
+
+@media (max-width: 425px) {
+  .intro .img-block {
+    width: 100%;
   }
 }
 
